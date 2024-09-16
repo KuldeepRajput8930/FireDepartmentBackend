@@ -11,17 +11,15 @@ const FormDataModel = require("./models/LoginFormdata");
 const Departmentlogin = require("./models/DepartmentLogin");
 const Application = require("./models/Application");
 const FireExtinguishingDetails = require("./models/FireExtinguishingDetails");
-const OfficerLogin = require("./models/officerLogin");
+const OfficerLogin = require("./models/OfficerLogin");
 
 // Import dotenv to use environment variables
 require("dotenv").config();
 
 // Constants
-const JWT_SECRET =
-  "3304cf28c502231a06ef778b9e71aaad711094a84463259d3c8c7709b9f317b50c7575fa85e9f6eb1c6dc08939035ae27be93518dab1687327713771e5ec01fe";
+const JWT_SECRET = process.env.JWT_SECRET;
 const PORT = process.env.PORT || 5000;
-const mongoURI =
-  "mongodb+srv://Kuldeep_Rajput:Kuldeep_Rajput@firesafety.usf1z.mongodb.net/FIRESAFETY?retryWrites=true&w=majority&appName=FIRESAFETY";
+const mongoURI = process.env.mongoURI;
 
 // Initialize Express app
 const app = express();
